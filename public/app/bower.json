@@ -1,0 +1,30 @@
+{
+  "name": "imail frontend",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rahmanda/imail",
+  "authors": [
+    "rahmandawibowo <rahmandawibowo@gmail.com>"
+  ],
+  "description": "imail frontend",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "imail",
+    "email",
+    "inbox",
+    "filtering"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+    "angular-route" : "~1.3.5"
+  }
+}

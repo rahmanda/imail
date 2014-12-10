@@ -2,6 +2,9 @@
 
 class BaseController extends Controller {
 
+	protected function me() {
+		return Auth::user();
+	}
 	/**
 	 * Setup the layout used by the controller.
 	 *
