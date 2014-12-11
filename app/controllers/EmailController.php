@@ -8,11 +8,11 @@ class EmailController extends \BaseController {
 
 	public function getByUser() {
 		$user = $this->me();
-		return $user->emails;
+		return Response::json($this->emails->byUser($this->me())->orderBy('created_at', 'desc')->get(), 200);
 	}
 
 	public function getById($emailId) {
-		return $this->messages->byId($emailId)->get();
+		return Response::json($this->emails->byId($emailId)->first(), 200);
 	}
 
 	public function sendEmail() {
@@ -20,11 +20,11 @@ class EmailController extends \BaseController {
 		$email->user()->associate($this->me());
 		$email->save();
 
-		return $email;
+		return Response::json($email, 200);
 	}
 
 	public function getUpdates($lastEmailId) {
-		return $this->messages->byUser($this->me())->afterId($lastEmailId)->get();
+		return Response::json($this->emails->byUser($this->me())->afterId($lastEmailId)->get(), 200);
 	}
 
 }
