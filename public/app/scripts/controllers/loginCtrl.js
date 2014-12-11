@@ -2,16 +2,16 @@
 
 angular.module('imail')
 
-	.controller('LoginController', ['$scope', '$state', 'Auth', function($scope, $state, Auth) {
+	.controller('LoginController', ['$rootScope', '$scope', '$state', 'Auth', function($rootScope, $scope, $state, Auth) {
 		
 		$scope.login = function (credentials) {
+			
 			Auth.login(credentials)
 				.success(function (data) {
 					$state.go('imail.inbox');
-					console.log(data);
 				})
-				.error(function (data) {
-					console.log(data);
+				.error(function (data, status, headers, config) {
+					console.log(status);
 				});
 		};
 
