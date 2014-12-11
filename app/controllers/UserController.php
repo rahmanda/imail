@@ -7,19 +7,18 @@ class UserController extends \BaseController {
 	}
 
 	public function login() {
-		$credentials = Input::all();
-		if(Auth::attempt(array('account' => $credentials->account, 'password' => $credentials->password))) {
-			return Auth::user();
+		if(Auth::attempt(array('account' => Input::get('account'), 'password' => Input::get('password')))) {
+			return Response::json(Auth::user(), 200);
 		} else {
-			return 'Invalid credentials';
+			return Response::json('Invalid credentials', 400);
 		}
 	}
 
 	public function logout() {
 		if(Auth::logout()) {
-			return 'Logout success';
+			return Response::json('Logout success', 200);
 		} else {
-			return 'Logout failed';
+			return Response::json('Logout failed', 400);
 		}
 	}
 }
