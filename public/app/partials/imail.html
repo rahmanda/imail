@@ -1,5 +1,17 @@
 <div class="imail-header">
+<span class="app-title">
+	<a ui-sref='imail.inbox'>Imail</a>
+</span>
 <!-- <span class="account-name">{{ user.name }} | {{ user.account }}</span> -->
-<button ng-click="logout()">Logout</button>
+<div class="account-section">
+	<span class="account-name">satellite@mail.com</span>
+	<button class="topcoat-button logout-btn" ng-click="logout()">Logout</button>
+</div>
+</div>
+<div class="imail-sidebar">
+	<ul class="action-list">
+		<li class="nav action-btn"><a class="topcoat-button--cta btn compose-btn" ui-sref='imail.inbox'>Compose</a></li>
+		<li class="nav"><a class="inbox-nav" ui-sref='imail.inbox'>Inbox (3)</a></li>
+	</ul>
 </div>
 <div class="inbox" ui-view></div>
