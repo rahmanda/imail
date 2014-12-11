@@ -7,11 +7,13 @@ class UsersTableSeeder extends Seeder {
 
 		User::create(array(
 			'account' => 'satellite@mail.com',
+			'name' => 'Satellite',
 			'password' => Hash::make('satellite')
 		));
 
 		User::create(array(
 			'account' => 'jarvis@mail.com',
+			'name' => 'Jarvis',
 			'password' => Hash::make('jarvis')
 		));
 	}
