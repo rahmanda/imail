@@ -1,0 +1,5 @@
+<div class="email-list" ng-repeat="email in emails">
+	<div class="title-email">
+		<a ui-sref="imail.email({ emailId: email.id })">{{ email.subject }}</a>
+	</div>
+</div>
