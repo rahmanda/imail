@@ -2,7 +2,7 @@
 
 angular.module('imail')
 
-	.controller('InboxController', ['$scope', 'Inbox', function($scope, Inbox) {
+	.controller('InboxController', ['$scope', '$state', 'Inbox', function($scope, $state, Inbox) {
 
 		Inbox.getByUser()
 			.success(function(data) {
@@ -11,5 +11,5 @@ angular.module('imail')
 			.error(function(error) {
 				console.log(error);
 			});
-
+			
 	}]);
