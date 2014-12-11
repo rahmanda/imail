@@ -1,11 +1,26 @@
 /**
  * Global style
  */
-body {
-  background: #FFFFFF; }
+html {
+  height: 100%; }
 
-button:hover {
+body {
+  background: #FFFFFF;
+  height: 100%; }
+
+button:hover, input[type='submit'], a.btn {
   cursor: pointer; }
+
+ul {
+  padding-left: 0; }
+  ul li {
+    list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  height: calc(100% - 61px); }
 
 /**
  * Login page
@@ -30,3 +45,61 @@ button:hover {
     .login-box .login-form button[type='submit'] {
       width: 100%;
       height: 44px; }
+
+/**
+ * App header
+ */
+.imail-header {
+  height: 42px;
+  background: #dfe2e2;
+  border-bottom: 1px solid #bbbbbb;
+  padding: 18px 32px 0px 32px; }
+  .imail-header .app-title {
+    float: left; }
+  .imail-header .account-section {
+    float: right;
+    display: inline-block; }
+    .imail-header .account-section .account-name {
+      margin-right: 10px; }
+
+/**
+ * App sidebar
+ */
+.imail-sidebar {
+  float: left;
+  width: 202px;
+  height: 100%; }
+  .imail-sidebar .action-list {
+    padding: 1em 1em 0 2em; }
+    .imail-sidebar .action-list .compose-btn {
+      text-align: center;
+      font-size: 18px;
+      padding: 5px 20px;
+      margin-bottom: 20px; }
+
+/**
+ * Inbox
+ */
+.inbox {
+  margin: 32px 0px;
+  width: calc(100% - 202px - 32px);
+  height: calc(100% - 64px - 2px);
+  float: left;
+  background: #dfe2e2;
+  overflow-y: auto;
+  border-top: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb; }
+  .inbox .email {
+    padding: 10px 15px;
+    border-bottom: 1px solid #bbbbbb; }
+    .inbox .email .email-sender {
+      width: 20%;
+      float: left; }
+    .inbox .email .email-subject {
+      width: 70%;
+      float: left; }
+    .inbox .email .email-time {
+      text-align: right; }
+  .inbox .email:hover {
+    cursor: pointer;
+    background: #b6b6b6; }
