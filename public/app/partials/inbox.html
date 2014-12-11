@@ -1,5 +1,16 @@
 <div class="email-list" ng-repeat="email in emails">
-	<div class="title-email">
-		<a ui-sref="imail.email({ emailId: email.id })">{{ email.subject }}</a>
+	<a href="#/imail/inbox/{{ email.id }}">
+	<div class="email">
+		<div class="email-sender">
+			<span>{{ email.sender_name }}</span>
+		</div>
+		<div class="email-subject">
+			<span>{{ email.subject }}</span>
+		</div>
+		<div class="email-time">
+			<span>{{ email.created_at | monthday }}</span>
+		</div>
+		<!-- <a ui-sref='imail.email({emailId: email.id})'>{{ email.subject }}</a> -->
 	</div>
+	</a>
 </div>
