@@ -12,7 +12,7 @@ class Email extends Eloquent {
 	 * Fillable fields in database table
 	 * @var array
 	 */
-	protected $fillable = array('from', 'sender_name', 'content');
+	protected $fillable = array('from', 'sender_name', 'email');
 
 	/**
 	 * Get single email
@@ -43,12 +43,11 @@ class Email extends Eloquent {
 	public function scopeByUser($query, $user) {
 		return $query->where('to', $user->account);
 	}
-
 	/**
 	 * Define one-to-one relation to User
 	 * @return mixed
 	 */
 	public function user() {
-		return $this->belongsTo('User', 'to');
+		return $this->belongsTo('User', 'account');
 	}
 }
