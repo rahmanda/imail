@@ -23,6 +23,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
+	protected $fillable = array('account', 'name', 'password');
+
+	protected $primaryKey = 'account';
+
 	/**
 	 * Define relation one-to-many to Email
 	 * @return [type] [description]
