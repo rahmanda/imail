@@ -83,7 +83,7 @@ a:visited, a:link, a:hover, a:active, a:not(.btn) {
   top: 60px;
   z-index: 50; }
   .imail-sidebar .action-list {
-    padding: 1em 1em 0 2em; }
+    padding: 0px 1em 0 2em; }
     .imail-sidebar .action-list .compose-btn {
       text-align: center;
       font-size: 18px;
@@ -95,19 +95,18 @@ a:visited, a:link, a:hover, a:active, a:not(.btn) {
  * Inbox
  */
 .inbox {
-  margin: 32px 0px;
   width: calc(100% - 202px);
   float: left;
   overflow-y: auto;
-  border-top: 1px solid #bbbbbb;
   position: relative;
   top: 60px;
   left: 202px; }
+  .inbox .emails {
+    width: calc(100% - 32px); }
   .inbox .email {
     padding: 10px 15px;
     border-bottom: 1px solid #bbbbbb;
-    background: #dfe2e2;
-    width: calc(100% - 64px); }
+    background: #dfe2e2; }
     .inbox .email .email-sender {
       width: 20%;
       float: left; }
@@ -121,14 +120,97 @@ a:visited, a:link, a:hover, a:active, a:not(.btn) {
     background: #b6b6b6; }
 
 /**
+ * Gmail scrollbar style
+ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset -1px -1px 0 rgba(0, 0, 0, 0.07); }
+
+::-webkit-scrollbar:hover {
+  background-color: #eee; }
+
+::-webkit-resizer {
+  -webkit-border-radius: 4px;
+  background-color: #666; }
+
+::-webkit-scrollbar-thumb {
+  min-height: 0.8em;
+  min-width: 0.8em;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset -1px -1px 0 rgba(0, 0, 0, 0.07); }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb; }
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #888; }
+
+.categories-nav {
+  border-top: 1px solid #bbbbbb;
+  width: calc(100% - 32px);
+  border-spacing: 0px;
+  margin-top: 16px; }
+  .categories-nav .categories td {
+    border-right: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+    position: relative;
+    width: 20%;
+    background: #dfe2e2; }
+    .categories-nav .categories td .text {
+      padding-left: 15px;
+      padding-top: 5%;
+      padding-bottom: 5%; }
+  .categories-nav .text .fa {
+    margin-right: 10px; }
+  .categories-nav .mark {
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+  .categories-nav td.active {
+    border-bottom: 0px;
+    background: #FFFFFF; }
+  .categories-nav .categories-bar td {
+    border-bottom: 1px solid #bbbbbb; }
+    .categories-nav .categories-bar td div {
+      height: 10px; }
+  .categories-nav .cell:hover {
+    cursor: pointer; }
+  .categories-nav .primary.active .mark {
+    background: black; }
+  .categories-nav .social.active .mark {
+    background: #4884E3; }
+  .categories-nav .promotion.active .mark {
+    background: #16A665; }
+  .categories-nav .updates.active .mark {
+    background: #E9B330; }
+  .categories-nav .forums.active .mark {
+    background: #A379E1; }
+  .categories-nav .primary:hover .mark {
+    background: black; }
+  .categories-nav .social:hover .mark {
+    background: #4884E3; }
+  .categories-nav .promotion:hover .mark {
+    background: #16A665; }
+  .categories-nav .updates:hover .mark {
+    background: #E9B330; }
+  .categories-nav .forums:hover .mark {
+    background: #A379E1; }
+
+/**
  * Email details
  */
 .email-details {
   padding: 10px 15px; }
-  .email-details .email-subject .subject {
+  .email-details .email-top .subject {
     font-size: 25px;
     padding-bottom: 16px;
     border-bottom: 1px solid #bbbbbb; }
-  .email-details .email-from .from {
+  .email-details .email-from {
     border-bottom: 1px dashed #bbbbbb;
     padding-bottom: 16px; }
+    .email-details .email-from .time {
+      float: right; }

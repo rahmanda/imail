@@ -2,142 +2,146 @@
  * Global style
  */
 
-html {
-	height: 100%;
-}
-body {
-	background: #FFFFFF;
-	height: 100%;
-}
+ html {
+ 	height: 100%;
+ }
+ body {
+ 	background: #FFFFFF;
+ 	height: 100%;
+ }
 
-button:hover, input[type='submit'], a.btn {
-	cursor: pointer;
-}
+ button:hover, input[type='submit'], a.btn {
+ 	cursor: pointer;
+ }
 
-ul {
-	padding-left: 0;
-	li {
-		list-style: none;
-	}
-}
+ ul {
+ 	padding-left: 0;
+ 	li {
+ 		list-style: none;
+ 	}
+ }
 
-a {
-	text-decoration: none;
-}
+ a {
+ 	text-decoration: none;
+ }
 
-a:visited, a:link, a:hover, a:active, a:not(.btn) {
-	color: black;
-}
+ a:visited, a:link, a:hover, a:active, a:not(.btn) {
+ 	color: black;
+ }
 
-.container {
-	height: 100%; 
+ .container {
+ 	height: 100%; 
 	// calc(100% - 61px);
 	overflow-y: hidden;
 }
 /**
  * Login page
  */
-.login-box {
-	width: 30%;
-	height: auto;
-	margin: 10% auto 0 auto;
-	padding: 22px 0;
-	background: #dfe2e2;
-	border-radius: 2px;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	.box-title {
-		text-align: center;
-	}
+ .login-box {
+ 	width: 30%;
+ 	height: auto;
+ 	margin: 10% auto 0 auto;
+ 	padding: 22px 0;
+ 	background: #dfe2e2;
+ 	border-radius: 2px;
+ 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+ 	.box-title {
+ 		text-align: center;
+ 	}
 
-	.login-form {
-		padding: 1em 10%;
-		input[name='account'], input[name='password'] {
-			display: block;
-			width: 100%;
-			margin-bottom: 1em;
-			height: 44px;
-		}
-		button[type='submit'] {
-			width: 100%;
-			height: 44px;
-		}
-	}
-}
+ 	.login-form {
+ 		padding: 1em 10%;
+ 		input[name='account'], input[name='password'] {
+ 			display: block;
+ 			width: 100%;
+ 			margin-bottom: 1em;
+ 			height: 44px;
+ 		}
+ 		button[type='submit'] {
+ 			width: 100%;
+ 			height: 44px;
+ 		}
+ 	}
+ }
 
 /**
  * App header
  */
 
-.imail-header {
-	height: 42px;
-	width: calc(100% - 64px);
-	background: #dfe2e2;
-	border-bottom: 1px solid #bbbbbb;
-	padding: 18px 32px 0px 32px;
-	position: fixed;
-	top: 0;
-	z-index: 50;
-	display: block;
-	.app-title {
-		float: left;
-	}
+ .imail-header {
+ 	height: 42px;
+ 	width: calc(100% - 64px);
+ 	background: #dfe2e2;
+ 	border-bottom: 1px solid #bbbbbb;
+ 	padding: 18px 32px 0px 32px;
+ 	position: fixed;
+ 	top: 0;
+ 	z-index: 50;
+ 	display: block;
+ 	.app-title {
+ 		float: left;
+ 	}
 
-	.account-section {
-		float: right;
-		display: inline-block;
-		.account-name {
-			margin-right: 10px;
-		}
-	}
-}
+ 	.account-section {
+ 		float: right;
+ 		display: inline-block;
+ 		.account-name {
+ 			margin-right: 10px;
+ 		}
+ 	}
+ }
 
 /**
  * App sidebar
  */
 
-.imail-sidebar {
-	float: left;
-	width: 202px;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 60px;
-	z-index: 50;
-	.action-list {
-		padding: 1em 1em 0 2em;
-		.compose-btn {
-			text-align: center;
-			font-size: 18px;
-			padding: 5px 20px;
-			margin-bottom: 20px;
-			color: white;
-		}
+ .imail-sidebar {
+ 	float: left;
+ 	width: 202px;
+ 	height: 100%;
+ 	position: fixed;
+ 	left: 0;
+ 	top: 60px;
+ 	z-index: 50;
+ 	.action-list {
+ 		padding: 0px 1em 0 2em;
+ 		.compose-btn {
+ 			text-align: center;
+ 			font-size: 18px;
+ 			padding: 5px 20px;
+ 			margin-bottom: 20px;
+ 			color: white;
+ 		}
 
-	}
-}
+ 	}
+ }
 
 /**
  * Inbox
  */
 
-.inbox {
-	margin: 32px 0px;
-	width: calc(100% - 202px);
+ .inbox {
+ 	// margin: 10px 0px;
+ 	width: calc(100% - 202px);
 	//height: 551px; // it should be in javascript way
 	// height: calc(100% - 64px - 2px);
 	float: left;
 	// background: #dfe2e2;
 	overflow-y: auto;
-	border-top: 1px solid #bbbbbb;
+	// border-top: 1px solid #bbbbbb;
 	// border-bottom: 1px solid #bbbbbb;
 	position: relative;
 	top: 60px;
 	left: 202px;
+
+	.emails {
+		width: calc(100% - 32px);
+	}
 	.email {
 		padding: 10px 15px;
 		border-bottom: 1px solid #bbbbbb;
 		background: #dfe2e2;
-		width: calc(100% - 64px);
+		//width: calc(100% - 64px);
 		.email-sender {
 			width: 20%;
 			float: left;
@@ -158,22 +162,173 @@ a:visited, a:link, a:hover, a:active, a:not(.btn) {
 }
 
 /**
- * Email details
+ * Gmail scrollbar style
  */
 
-.email-details {
-	padding: 10px 15px;
-	.email-subject {
-		.subject {
-			font-size: 25px;
-			padding-bottom: 16px;
+::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+    background-color:#fff;
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset -1px -1px 0 rgba(0,0,0,.07);
+}
+::-webkit-scrollbar:hover{
+    background-color:#eee;
+}
+::-webkit-resizer{
+    -webkit-border-radius:4px;
+    background-color:#666;
+}
+::-webkit-scrollbar-thumb{
+    min-height:0.8em;
+    min-width:0.8em;
+    background-color: rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset -1px -1px 0 rgba(0,0,0,.07);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #bbb;
+}
+::-webkit-scrollbar-thumb:active{
+    background-color:#888;
+}
+
+.categories-nav {
+	border-top: 1px solid #bbbbbb;
+	width: calc(100% - 32px);
+	border-spacing: 0px;
+	margin-top: 16px;
+	.categories {
+		td {
+			border-right: 1px solid #bbbbbb;
 			border-bottom: 1px solid #bbbbbb;
+			position: relative;
+			width: 20%;
+			background: #dfe2e2;
+			.text {
+				padding-left: 15px;
+				padding-top: 5%;
+				padding-bottom: 5%;
+			}
 		}
 	}
-	.email-from {
-		.from {
-			border-bottom: 1px dashed #bbbbbb;
-			padding-bottom: 16px;
+
+	.text {
+		.fa {
+			margin-right: 10px;
+		}
+	}
+
+	.mark {
+		height: 2px;
+		width: 100%;	
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	td.active {
+		border-bottom: 0px;
+		background: #FFFFFF;
+		// .mark {
+		// 	background-color: saturate(blue, 20%);
+		// }
+	}
+	
+	.categories-bar {
+		td {
+			border-bottom: 1px solid #bbbbbb;
+			div {
+				height: 10px;
+			}
+		}
+	}
+
+	.cell:hover {
+		cursor: pointer;
+	}
+	
+	.primary.active {
+		.mark {
+			background: black;
+		}
+	}
+
+	.social.active {
+		.mark {
+			background: #4884E3;
+		}
+	}
+
+	.promotion.active {
+		.mark {
+			background: #16A665;
+		}
+	}
+
+	.updates.active {
+		.mark {
+			background: #E9B330;
+		}
+	}
+
+	.forums.active {
+		.mark {
+			background: #A379E1;
+		}
+	}
+
+	.primary:hover {
+
+		.mark {
+			background: black;
+		} 
+	}
+
+	.social:hover {
+		.mark {
+			background: #4884E3;
+		}
+	}
+
+	.promotion:hover {
+		.mark {
+			background: #16A665;
+		}
+	}
+
+	.updates:hover {
+		.mark {
+			background: #E9B330;
+		}
+	}
+
+	.forums:hover {
+		.mark {
+			background: #A379E1;
 		}
 	}
 }
+
+/**
+ * Email details
+ */
+
+ .email-details {
+ 	padding: 10px 15px;
+ 	.email-top {
+ 		.subject {
+ 			font-size: 25px;
+ 			padding-bottom: 16px;
+ 			border-bottom: 1px solid #bbbbbb;
+ 		}
+ 	}
+ 	.email-from {
+ 		border-bottom: 1px dashed #bbbbbb;
+ 		padding-bottom: 16px;
+ 		.from {
+ 			// float: left;
+ 		}
+ 		.time {
+ 			float: right;
+ 		}
+ 	}
+ }
