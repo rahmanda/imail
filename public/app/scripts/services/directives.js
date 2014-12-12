@@ -5,7 +5,7 @@ angular.module('imail')
 	.directive('resizable', function($window) {
 		return function ($scope){
 			$scope.initializeWindowSize = function () {
-				$scope.windowHeight = ($window.innerHeight - 100) + 'px';
+				$scope.windowHeight = ($window.innerHeight - 77) + 'px';
 			};
 
 			$scope.initializeWindowSize();
