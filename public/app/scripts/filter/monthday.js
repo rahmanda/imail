@@ -8,9 +8,19 @@ angular.module('imail')
 		{
 			var currentDate = new Date();
 
-			if(input == null) { return ''; }
+			if(input == null) { 
+				return ''; 
+			} else {
+				var inputDate = new Date(input);
+			}
 
-			var _date = $filter('date')(new Date(input), 'MMM d');
+			var elapsed = currentDate - inputDate;
+
+			if ( elapsed / (1000*60*60*24) > 1) {
+				var _date = $filter('date')(inputDate, 'MMM d');
+			} else {
+				var _date = $filter('date')(inputDate, 'h:mm a');
+			}
 
 			return _date; 
 		};
