@@ -1,10 +1,11 @@
 <div class="email-details">
-	<div class="email-subject">
+	<div class="email-top">
 		<h1 class="subject">{{ email.subject }}</h1>
 	</div>
 
 	<div class="email-from">
-		<p class="from">{{ email.from }}</p>
+		<span class="from">{{ email.from }}</span>
+		<span class="time">{{ email.created_at | monthday }}</span>
 	</div>
 
 	<div class="email-content">
