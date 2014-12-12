@@ -25,8 +25,14 @@ a {
 	text-decoration: none;
 }
 
+a:visited, a:link, a:hover, a:active, a:not(.btn) {
+	color: black;
+}
+
 .container {
-	height: calc(100% - 61px);
+	height: 100%; 
+	// calc(100% - 61px);
+	overflow-y: hidden;
 }
 /**
  * Login page
@@ -64,10 +70,14 @@ a {
 
 .imail-header {
 	height: 42px;
+	width: calc(100% - 64px);
 	background: #dfe2e2;
 	border-bottom: 1px solid #bbbbbb;
 	padding: 18px 32px 0px 32px;
-
+	position: fixed;
+	top: 0;
+	z-index: 50;
+	display: block;
 	.app-title {
 		float: left;
 	}
@@ -89,6 +99,10 @@ a {
 	float: left;
 	width: 202px;
 	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	z-index: 50;
 	.action-list {
 		padding: 1em 1em 0 2em;
 		.compose-btn {
@@ -96,6 +110,7 @@ a {
 			font-size: 18px;
 			padding: 5px 20px;
 			margin-bottom: 20px;
+			color: white;
 		}
 
 	}
@@ -107,16 +122,22 @@ a {
 
 .inbox {
 	margin: 32px 0px;
-	width: calc(100% - 202px - 32px);
-	height: calc(100% - 64px - 2px);
+	width: calc(100% - 202px);
+	//height: 551px; // it should be in javascript way
+	// height: calc(100% - 64px - 2px);
 	float: left;
-	background: #dfe2e2;
+	// background: #dfe2e2;
 	overflow-y: auto;
 	border-top: 1px solid #bbbbbb;
-	border-bottom: 1px solid #bbbbbb;
+	// border-bottom: 1px solid #bbbbbb;
+	position: relative;
+	top: 60px;
+	left: 202px;
 	.email {
 		padding: 10px 15px;
 		border-bottom: 1px solid #bbbbbb;
+		background: #dfe2e2;
+		width: calc(100% - 64px);
 		.email-sender {
 			width: 20%;
 			float: left;
@@ -133,5 +154,26 @@ a {
 	.email:hover {
 		cursor: pointer;
 		background: darken(#bbbbbb, 2%);
+	}
+}
+
+/**
+ * Email details
+ */
+
+.email-details {
+	padding: 10px 15px;
+	.email-subject {
+		.subject {
+			font-size: 25px;
+			padding-bottom: 16px;
+			border-bottom: 1px solid #bbbbbb;
+		}
+	}
+	.email-from {
+		.from {
+			border-bottom: 1px dashed #bbbbbb;
+			padding-bottom: 16px;
+		}
 	}
 }
