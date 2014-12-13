@@ -2,16 +2,21 @@ Langkah-langkah pembangunan sistem IR
 1. Praproses dokumen email
 	1.1 Membersihkan dokumen email dari tag-tag html, url dan quotable priori
 	1.2 Mengambil alamat pengirim, nama pengirim, subjek dan isi email
+
 2. Pembagian email menjadi data latih dan data uji (data latih untuk pembangunan sistem IR, data uji untuk evaluasi sistem)
+
 3. Melakukan tokenisasi terhadap dokumen email
+
 4. Melakukan pembersihan token dari stop words
 	4.1 Menyimpan hasil token yang bukan stop words ke dalam tabel token
 	4.2 Tabel token terdiri dari nama term, id dokumen, TF dan DF
+
 5. Melakukan pemilihan fitur dari token/term
 	5.1 Menghitung nilai chi-square pada tiap term dengan taraf nyata tertentu (0,05 atau 0,001)
 	5.2 Menyimpan hasil perhitungan kedalam tabel chi-square
 	5.3 Tabel chi-square terdiri dari nama term, nama kelas dan nilai chi-square
 	5.4 Term yang dipilih sebagai fitur adalah term yang memiliki nilai chi-square diatas nilai kritis pada masing-masing taraf nyata (3,84 untuk taraf nyata 0,05 dan 10,83 untuk taraf nyata 0,001)
+
 6. Melakukan pembobotan TF-IDF terhadap term yang menjadi fitur
 	6.1 Menyimpan hasil pembobotan ke dalam tabel termWeight
 	6.2 Table termWeight terdiri dari id dokumen, nama term, tf, tfidf dan nama kelas
