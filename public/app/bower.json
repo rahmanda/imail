@@ -22,6 +22,8 @@
   ],
   "dependencies": {
     "angular-ui-router": "~0.2.13",
-    "topcoat": "~0.8.0"
+    "topcoat": "~0.8.0",
+    "angular-notify": "~2.0.2",
+    "ngDialog": "~0.3.7"
   }
 }
