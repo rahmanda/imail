@@ -40,7 +40,7 @@
  .login-box {
  	width: 30%;
  	height: auto;
- 	margin: 10% auto 0 auto;
+ 	margin: 0 auto 0 auto;
  	padding: 22px 0;
  	background: #dfe2e2;
  	border-radius: 2px;
@@ -165,69 +165,69 @@
  * Gmail scrollbar style
  */
 
-::-webkit-scrollbar{
-    width:10px;
-    height:10px;
-    background-color:#fff;
-    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset -1px -1px 0 rgba(0,0,0,.07);
-}
-::-webkit-scrollbar:hover{
-    background-color:#eee;
-}
-::-webkit-resizer{
-    -webkit-border-radius:4px;
-    background-color:#666;
-}
-::-webkit-scrollbar-thumb{
-    min-height:0.8em;
-    min-width:0.8em;
-    background-color: rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset -1px -1px 0 rgba(0,0,0,.07);
-}
-::-webkit-scrollbar-thumb:hover{
-    background-color: #bbb;
-}
-::-webkit-scrollbar-thumb:active{
-    background-color:#888;
-}
+ ::-webkit-scrollbar{
+ 	width:10px;
+ 	height:10px;
+ 	background-color:#fff;
+ 	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset -1px -1px 0 rgba(0,0,0,.07);
+ }
+ ::-webkit-scrollbar:hover{
+ 	background-color:#eee;
+ }
+ ::-webkit-resizer{
+ 	-webkit-border-radius:4px;
+ 	background-color:#666;
+ }
+ ::-webkit-scrollbar-thumb{
+ 	min-height:0.8em;
+ 	min-width:0.8em;
+ 	background-color: rgba(0, 0, 0, .2);
+ 	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset -1px -1px 0 rgba(0,0,0,.07);
+ }
+ ::-webkit-scrollbar-thumb:hover{
+ 	background-color: #bbb;
+ }
+ ::-webkit-scrollbar-thumb:active{
+ 	background-color:#888;
+ }
 
-.categories-nav {
-	border-top: 1px solid #bbbbbb;
-	width: calc(100% - 32px);
-	border-spacing: 0px;
-	margin-top: 16px;
-	.categories {
-		td {
-			border-right: 1px solid #bbbbbb;
-			border-bottom: 1px solid #bbbbbb;
-			position: relative;
-			width: 20%;
-			background: #dfe2e2;
-			.text {
-				padding-left: 15px;
-				padding-top: 5%;
-				padding-bottom: 5%;
-			}
-		}
-	}
+ .categories-nav {
+ 	border-top: 1px solid #bbbbbb;
+ 	width: calc(100% - 32px);
+ 	border-spacing: 0px;
+ 	margin-top: 16px;
+ 	.categories {
+ 		td {
+ 			border-right: 1px solid #bbbbbb;
+ 			border-bottom: 1px solid #bbbbbb;
+ 			position: relative;
+ 			width: 20%;
+ 			background: #dfe2e2;
+ 			.text {
+ 				padding-left: 15px;
+ 				padding-top: 5%;
+ 				padding-bottom: 5%;
+ 			}
+ 		}
+ 	}
 
-	.text {
-		.fa {
-			margin-right: 10px;
-		}
-	}
+ 	.text {
+ 		.fa {
+ 			margin-right: 10px;
+ 		}
+ 	}
 
-	.mark {
-		height: 2px;
-		width: 100%;	
-		position: absolute;
-		top: 0px;
-		left: 0px;
-	}
+ 	.mark {
+ 		height: 2px;
+ 		width: 100%;	
+ 		position: absolute;
+ 		top: 0px;
+ 		left: 0px;
+ 	}
 
-	td.active {
-		border-bottom: 0px;
-		background: #FFFFFF;
+ 	td.active {
+ 		border-bottom: 0px;
+ 		background: #FFFFFF;
 		// .mark {
 		// 	background-color: saturate(blue, 20%);
 		// }
@@ -332,3 +332,44 @@
  		}
  	}
  }
+
+ /**
+  * Compose modals
+  */
+
+  // overriding ngdialog style
+  .ngdialog-content {
+  	width: 90% !important;
+  	border-radius: 0px !important;
+  }
+
+  .ngdialog {
+  	padding-top: 16px !important;
+  	padding-bottom: 0px !important;
+  }
+
+  .compose-header {
+  	h2 {
+  		font-size: 18px;
+  	}
+  }
+
+  .compose-email {
+  	textarea {
+  		width: 100%;
+  	}
+  }
+
+  .compose-actions {
+  	margin-top: 16px;
+  	overflow: hidden;
+  	button {
+  		width: 15%;
+  		height: 3em;
+  		float: right;
+  		margin-left: 16px;
+  	}
+  	.clear-stuff {
+  		clear: right;
+  	}
+  }
