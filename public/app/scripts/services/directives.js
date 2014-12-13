@@ -6,6 +6,7 @@ angular.module('imail')
 		return function ($scope){
 			$scope.initializeWindowSize = function () {
 				$scope.windowHeight = ($window.innerHeight - 77) + 'px';
+				$scope.composeHeight = ($window.innerHeight - 200) + 'px'; 
 			};
 
 			$scope.initializeWindowSize();
