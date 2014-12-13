@@ -2,14 +2,17 @@
 
 angular.module('imail')
 
-	.controller('EmailController', ['$scope', 'Inbox', '$stateParams', function($scope, Inbox, $stateParams) {
+.controller('EmailController', ['$scope', 'Inbox', '$stateParams', 'PageTitle', 'Auth', 
+	function($scope, Inbox, $stateParams, PageTitle, Auth) {
 		
 		Inbox.getById($stateParams.emailId)
-			.success(function(data) {
-				$scope.email = data;
-			})
-			.error(function(error) {
-				console.log(error);
-			});
+		.success(function(data) {
+			$scope.email = data;
+
+			PageTitle.set(data.subject + ' - ' + Auth.getAccount());
+		})
+		.error(function(error) {
+			console.log(error);
+		});
 
 	}]);
