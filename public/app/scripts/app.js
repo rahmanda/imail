@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('imail', ['ui.router'])
+angular.module('imail', ['ui.router', 'cgNotify', 'ngDialog'])
 
 	.config(function ($stateProvider, $urlRouterProvider) {
 
