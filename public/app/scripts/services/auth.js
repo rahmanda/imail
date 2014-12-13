@@ -4,8 +4,9 @@ angular.module('imail')
 
 	.factory('Auth', ['WebService', 'Session', function (WebService, Session) {
 
-		var cacheSession = function() {
+		var cacheSession = function(userData) {
 			Session.set('authenticated', true);
+			Session.set('account', userData);
 		};
 
 		var uncacheSession = function() {
@@ -16,7 +17,9 @@ angular.module('imail')
 
 			login : function (credentials) {
 				var login = WebService.post('login', credentials);
-				login.success(cacheSession);
+				login.success(function (data) {
+					cacheSession(data.account);
+				});
 				return login;
 			},
 
@@ -28,6 +31,10 @@ angular.module('imail')
 
 			isAuthenticated: function() {
 				return Session.get('authenticated');
+			},
+
+			getAccount: function() {
+				return Session.get('account');
 			}
 		};
 
